@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '192.168.123.113',
-    '127.0.0.1'
+    '127.0.0.1',
 ]
 
 
@@ -41,7 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.messages', # For displaying one time notifications to users
     'django.contrib.staticfiles', # For storing static files 
     'playground',
-     'debug_toolbar'
+    'debug_toolbar',
+    'store',
+    'tags'
 ]
 
 MIDDLEWARE = [
