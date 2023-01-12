@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-mq7&8ygwf11ww8jjw7#@r!azd=-1x$p@gksn!^67d70yx*c2j#
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '192.168.123.113',
+    '192.168.123.108',
     '127.0.0.1',
 ]
 
@@ -83,13 +83,17 @@ TEMPLATES = [
 WSGI_APPLICATION = 'storefront.wsgi.application'
 
 
-# Database
+# Databasess
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'storefront',
+        'USER': 'maranatha-kali',
+        'PASSWORD': 'martin',
+        'HOST':'localhost',
+        'PORT':'3306',
     }
 }
 
