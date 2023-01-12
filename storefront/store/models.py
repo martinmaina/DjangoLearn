@@ -26,7 +26,7 @@ class Product(models.Model):
     title = models.CharField(max_length=255)
     slug = models.SlugField(default='-')
     description = models.TextField()
-    price = models.DecimalField(max_digits=6, decimal_places=2)
+    unit_price = models.DecimalField(max_digits=6, decimal_places=2)
     inventory = models.IntegerField()
     last_update = models.DateTimeField(auto_now=True)
     collection = models.ForeignKey(Collection, on_delete=models.PROTECT)
@@ -85,8 +85,8 @@ class Address(models.Model):
 
     # If the customer can have multiple addresses, then the relationship will be one-to-many
     # customer_a = models.ForeignKey(Customer,on_delete=models.CASCADE)
-    order = models.ForeignKey(Order, on_delete=models.CASCADE)
-    zip = models.CharField(max_length=255)
+    # order = models.ForeignKey(Order, on_delete=models.CASCADE)
+    # zip = models.CharField(max_length=255)
 
 
 class OrderItem(models.Model):
